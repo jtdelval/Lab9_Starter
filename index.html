@@ -90,7 +90,8 @@
   <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
   <script>
     window.TrackJS && TrackJS.install({ 
-      token: "4bd7b09ecb6549beb2fce431f4b4a18b"
+      token: "4bd7b09ecb6549beb2fce431f4b4a18b",
+      application: "lab-9"
       // for more configuration options, see https://docs.trackjs.com
     });
   </script>
@@ -132,6 +133,7 @@
       try{getFirstNum()}
       catch{
         let e = new CalculatorError("oooOOoooOO spooky error");
+        TrackJS.track(e);
         throw e;
       }
     }
